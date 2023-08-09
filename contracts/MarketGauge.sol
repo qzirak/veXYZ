@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.13;
 
-import './interfaces/IMarket.sol';
-import './Gauge.sol';
+import "./interfaces/IMarket.sol";
+import "./Gauge.sol";
 
 contract MarketGauge is Gauge {
-
   function claimFees() external {
     claimMarketFees();
   }
@@ -21,7 +20,7 @@ contract MarketGauge is Gauge {
       IMarket(target)._withdrawAdminFees(fees);
       address underlying = IMarket(target).underlying();
 
-      if (fees  > 0) {
+      if (fees > 0) {
         // assuming that the admin is the gauge
         IERC20(underlying).approve(internal_bribe, fees);
         IBribe(internal_bribe).notifyRewardAmount(underlying, fees);
