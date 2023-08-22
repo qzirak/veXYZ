@@ -1,0 +1,291 @@
+{
+  "address": "0x03b5b6e82D24162e1f7203282dfE750A55F907c5",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "TWO_WEEKS",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "active_period",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "check",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "period",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "update_period",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x01989cf2be930324ce207cb173b975444ed1810e7f106e285ae1eb1da61874b6",
+  "receipt": {
+    "to": null,
+    "from": "0x3EBCE911621Ea69Fef4D4C02D00aBE5c0374653D",
+    "contractAddress": "0x03b5b6e82D24162e1f7203282dfE750A55F907c5",
+    "transactionIndex": 113,
+    "gasUsed": "205310",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x43ab8eb892d6b8f31d147f59a502aaca5f583506f81cff8e06629a14a330e012",
+    "transactionHash": "0x01989cf2be930324ce207cb173b975444ed1810e7f106e285ae1eb1da61874b6",
+    "logs": [],
+    "blockNumber": 32529239,
+    "cumulativeGasUsed": "34071009",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "metadata": {
+    "compiler": {
+      "version": "0.8.13+commit.abaa5c0e"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Initialized",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "TWO_WEEKS",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "active_period",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "check",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initialize"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "period",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "update_period",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "chain-abstraction-integration/=lib/chain-abstraction-integration/contracts/",
+        "connext-interfaces/=lib/chain-abstraction-integration/lib/connext-interfaces/",
+        "ds-test/=lib/solmate/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+        "forge-std/=lib/chain-abstraction-integration/lib/forge-std/src/",
+        "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "solmate/=lib/solmate/src/",
+        "vulcan/=lib/chain-abstraction-integration/lib/vulcan/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "contracts/EpochsTimer.sol": "EpochsTimer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/EpochsTimer.sol": {
+        "keccak256": "0x9b46646b3cf72172b5251e0e289c2b0492c9a26d63507d16c457489957b92d2a",
+        "urls": [
+          "bzz-raw://a9c03eb70eea74c2834f2a61163e048ced78db601147ba8a55fbf3962329a794",
+          "dweb:/ipfs/QmVm7CMEYzt8oXQgS4Rhotj1cyWRTCJPaqgAYA5fdBtGYR"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IMinter.sol": {
+        "keccak256": "0x38e172331502449cdaea62b44e7ef7f8c164df88c99a75bf070174c319c6db89",
+        "urls": [
+          "bzz-raw://3ffb1291a4ba8aed1b5c102c29a7b469cfdcef1fe27b3a96c8eb212cfc9fe152",
+          "dweb:/ipfs/QmTZC9FddziRcvY581DshYr37piEj3DEbVDCbku4xpJkXz"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+        "keccak256": "0x89be10e757d242e9b18d5a32c9fbe2019f6d63052bbe46397a430a1d60d7f794",
+        "urls": [
+          "bzz-raw://f103ee2e4aecd37aac6ceefe670709cdd7613dee25fa2d4d9feaf7fc0aaa155e",
+          "dweb:/ipfs/QmRiNZLoJk5k3HPMYGPGjZFd2ke1ZxjhJZkM45Ec9GH9hv"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+        "keccak256": "0x9c80f545915582e63fe206c6ce27cbe85a86fc10b9cd2a0e8c9488fb7c2ee422",
+        "urls": [
+          "bzz-raw://310136ad60820af4177a11a61d77a3686faf5fca4942b600e08fc940db38396b",
+          "dweb:/ipfs/QmbCzMNSTL7Zi7M4UCSqBrkHtp4jjxUnGbkneCZKdR1qeq"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506102c1806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80638129fc1c14610067578063919840ad14610071578063934d1fa41461008e578063d1399608146100a6578063ed29fc11146100af578063ef78d4fd146100b7575b600080fd5b61006f6100bf565b005b6100796101cc565b60405190151581526020015b60405180910390f35b6100986212750081565b604051908152602001610085565b61009860015481565b6100986101e8565b610098610226565b600054610100900460ff16158080156100df5750600054600160ff909116105b806100f95750303b1580156100f9575060005460ff166001145b6101605760405162461bcd60e51b815260206004820152602e60248201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160448201526d191e481a5b9a5d1a585b1a5e995960921b606482015260840160405180910390fd5b6000805460ff191660011790558015610183576000805461ff0019166101001790555b80156101c9576000805461ff0019169055604051600181527f7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb38474024989060200160405180910390a15b50565b6001546000906101df621275008261025b565b42101591505090565b6001546000906101fb621275008261025b565b4210610221576212750061020f8142610273565b6102199190610295565b600181905590505b919050565b6000621275006102368142610273565b6102409190610295565b905090565b634e487b7160e01b600052601160045260246000fd5b6000821982111561026e5761026e610245565b500190565b60008261029057634e487b7160e01b600052601260045260246000fd5b500490565b60008160001904831182151516156102af576102af610245565b50029056fea164736f6c634300080d000a",
+    "sourceMap": "169:704:1:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80638129fc1c14610067578063919840ad14610071578063934d1fa41461008e578063d1399608146100a6578063ed29fc11146100af578063ef78d4fd146100b7575b600080fd5b61006f6100bf565b005b6100796101cc565b60405190151581526020015b60405180910390f35b6100986212750081565b604051908152602001610085565b61009860015481565b6100986101e8565b610098610226565b600054610100900460ff16158080156100df5750600054600160ff909116105b806100f95750303b1580156100f9575060005460ff166001145b6101605760405162461bcd60e51b815260206004820152602e60248201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160448201526d191e481a5b9a5d1a585b1a5e995960921b606482015260840160405180910390fd5b6000805460ff191660011790558015610183576000805461ff0019166101001790555b80156101c9576000805461ff0019169055604051600181527f7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb38474024989060200160405180910390a15b50565b6001546000906101df621275008261025b565b42101591505090565b6001546000906101fb621275008261025b565b4210610221576212750061020f8142610273565b6102199190610295565b600181905590505b919050565b6000621275006102368142610273565b6102409190610295565b905090565b634e487b7160e01b600052601160045260246000fd5b6000821982111561026e5761026e610245565b500190565b60008261029057634e487b7160e01b600052601260045260246000fd5b500490565b60008160001904831182151516156102af576102af610245565b50029056fea164736f6c634300080d000a",
+    "sourceMap": "169:704:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;294:61;;;:::i;:::-;;620:138;;;:::i;:::-;;;179:14:71;;172:22;154:41;;142:2;127:18;620:138:1;;;;;;;;249:40;;282:7;249:40;;;;;352:25:71;;;340:2;325:18;249:40:1;206:177:71;220:25:1;;;;;;359:257;;;:::i;762:109::-;;;:::i;294:61::-;3279:19:41;3302:13;;;;;;3301:14;;3347:34;;;;-1:-1:-1;3365:12:41;;3380:1;3365:12;;;;:16;3347:34;3346:108;;;-1:-1:-1;3426:4:41;1713:19:47;:23;;;3387:66:41;;-1:-1:-1;3436:12:41;;;;;:17;3387:66;3325:201;;;;-1:-1:-1;;;3325:201:41;;590:2:71;3325:201:41;;;572:21:71;629:2;609:18;;;602:30;668:34;648:18;;;641:62;-1:-1:-1;;;719:18:71;;;712:44;773:19;;3325:201:41;;;;;;;;3536:12;:16;;-1:-1:-1;;3536:16:41;3551:1;3536:16;;;3562:65;;;;3596:13;:20;;-1:-1:-1;;3596:20:41;;;;;3562:65;3651:14;3647:99;;;3697:5;3681:21;;-1:-1:-1;;3681:21:41;;;3721:14;;-1:-1:-1;955:36:71;;3721:14:41;;943:2:71;928:18;3721:14:41;;;;;;;3647:99;3269:483;294:61:1:o;620:138::-;687:13;;660:4;;733:19;282:7;687:13;733:19;:::i;:::-;714:15;:38;;706:47;;;620:138;:::o;359:257::-;432:13;;402:7;;474:19;282:7;432:13;474:19;:::i;:::-;455:15;:38;451:141;;282:7;514:27;282:7;514:15;:27;:::i;:::-;513:41;;;;:::i;:::-;562:13;:23;;;503:51;-1:-1:-1;451:141:1;604:7;359:257;-1:-1:-1;359:257:1:o;762:109::-;803:7;282;826:27;282:7;826:15;:27;:::i;:::-;825:41;;;;:::i;:::-;818:48;;762:109;:::o;1002:127:71:-;1063:10;1058:3;1054:20;1051:1;1044:31;1094:4;1091:1;1084:15;1118:4;1115:1;1108:15;1134:128;1174:3;1205:1;1201:6;1198:1;1195:13;1192:39;;;1211:18;;:::i;:::-;-1:-1:-1;1247:9:71;;1134:128::o;1267:217::-;1307:1;1333;1323:132;;1377:10;1372:3;1368:20;1365:1;1358:31;1412:4;1409:1;1402:15;1440:4;1437:1;1430:15;1323:132;-1:-1:-1;1469:9:71;;1267:217::o;1489:168::-;1529:7;1595:1;1591;1587:6;1583:14;1580:1;1577:21;1572:1;1565:9;1558:17;1554:45;1551:71;;;1602:18;;:::i;:::-;-1:-1:-1;1642:9:71;;1489:168::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "TWO_WEEKS()": "934d1fa4",
+    "active_period()": "d1399608",
+    "check()": "919840ad",
+    "initialize()": "8129fc1c",
+    "period()": "ef78d4fd",
+    "update_period()": "ed29fc11"
+  }
+}

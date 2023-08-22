@@ -18,6 +18,7 @@ var HardhatUserConfig = require("hardhat/types/config").HardhatUserConfig;
 console.info('loading the .env config...');
 configDotenv();
 
+const OVERRIDE_RPC_URL = process.env.OVERRIDE_RPC_URL || process.env.ETH_PROVIDER_URL; // Deprecated: ETH_PROVIDER_URL
 const mnemonic =
     process.env.MNEMONIC ||
     "test test test test test test test test test test test junk";
@@ -57,9 +58,14 @@ module.exports = {
       gasPrice: 20e10,
     },
     arbitrum: {
-      url: `https://arb1.arbitrum.io/rpc`,
+      url: OVERRIDE_RPC_URL || `https://arb1.arbitrum.io/rpc`,
       accounts: { mnemonic },
       chainId: 42161
+    },
+    chapel: {
+      accounts: { mnemonic },
+      chainId: 97,
+      url: OVERRIDE_RPC_URL || "https://data-seed-prebsc-1-s1.binance.org:8545/"
     },
   }
 }

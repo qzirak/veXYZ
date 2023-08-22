@@ -35,8 +35,9 @@
     "forge": "forge",
     "prettier": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol' --config .prettierrc",
     "lint": "prettier --list-different 'contracts/**/*.sol'",
+    "deploy": "hardhat deploy --tags prod --no-compile",
     "deploy:localhost": "hardhat --network localhost deploy --tags prod --no-compile",
-    "deploy": "hardhat deploy --tags prod --no-compile"
+    "deploy:chapel": "hardhat --network chapel deploy --tags prod --no-compile"
   },
   "files": [
     "contracts"
