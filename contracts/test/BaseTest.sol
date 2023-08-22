@@ -236,7 +236,56 @@ contract BaseTest is Test {
 
     uint256 tokenIdStored = ve.tokenOfOwnerByIndex(address(this), 0);
 
-    assertEq(tokenId, tokenIdStored, "tokenOfOwnerByIndex/invalid-index-or-token");
+    assertEq(tokenId, tokenIdStored, "testTokenOfOwnerByIndex/invalid-index-or-token");
+  }
+
+  // [GAUGE VOTING STORAGE]
+  function testLockDurationEffect() public {
+    vm.chainId(ve.ARBITRUM_ONE());
+
+    address signer1 = address(444);
+
+    // both addresses create locks with different lock time
+    ionicToken.mint(address(this), 100e18);
+    ionicToken.mint(signer1, 100e18);
+
+    ionicToken.approve(address(ve), 100e18);
+    vm.prank(signer1);
+    ionicToken.approve(address(ve), 100e18);
+
+    uint256 tokenId1 = ve.create_lock(100e18, 52 weeks);
+    vm.prank(signer1);
+    uint256 tokenId2 = ve.create_lock(100e18, 26 weeks);
+
+    // signer1 should have less weight because of less lock time
+    assertApproxEqAbs(ve.balanceOfNFT(tokenId1), 100e18, 1e18, "testLockDurationEffect/wrong-nft-weight");
+    assertApproxEqAbs(ve.balanceOfNFTAt(tokenId2, block.timestamp), 50e18, 1e18, "testLockDurationEffect/wrong-nft-at-weight");
+    assertApproxEqAbs(ve.balanceOfAtNFT(tokenId1, block.number), 100e18, 1e18, "testLockDurationEffect/wrong-at-nft-weight");
+    assertApproxEqAbs(ve.totalSupplyAt(block.number), 150e18, 2e18, "testLockDurationEffect/wrong-supply-at-weight");
+    assertApproxEqAbs(ve.totalSupplyAtT(block.timestamp), 150e18, 2e18, "testLockDurationEffect/wrong-supply-at-t-weight");
+  }
+
+  function testMergeSplit() public {
+    vm.chainId(ve.ARBITRUM_ONE());
+
+    ionicToken.mint(address(this), 100e18);
+
+    ionicToken.approve(address(ve), 100e18);
+
+    uint256 tokenId0 = ve.create_lock(70e18, 26 weeks);
+    uint256 tokenId1 = ve.create_lock(30e18, 52 weeks);
+
+    ve.merge(tokenId0, tokenId1);
+
+    assertEq(ve.ownerOf(tokenId0), address(0), "testMergeSplit/invalid-merge");
+    
+    uint256[] memory amounts = new uint256[](2);
+    amounts[0] = 40e18;
+    amounts[1] = 60e18;
+    ve.split(amounts, tokenId1);
+
+    assertEq(ve.ownerOf(3), address(this), "testMergeSplit/invalid-split");
+    assertEq(ve.ownerOf(4), address(this), "testMergeSplit/invalid-split");
   }
 
   // [ESCROW LOGIC]
@@ -294,6 +343,22 @@ contract BaseTest is Test {
 
     assertEq(newEnd, previousEnd, "ends not equal");
     assertGt(int(newAmount), int(previousAmount), "newAmount less or equal");
+  }
+
+  function testIonicWithdraw() public {
+    uint256 tokenId = _helperCreateLock();
+
+    address owner = ve.ownerOf(tokenId);
+
+    assertEq(owner, address(this), "testIonicWithdraw/wrong-owner");
+    
+    vm.warp(block.timestamp + 53 weeks);
+
+    ve.withdraw(tokenId);
+
+    owner = ve.ownerOf(tokenId);
+
+    assertEq(owner, address(0), "testIonicWithdraw/still-owner");
   }
 
   function testCreateMarketGauges() public {
